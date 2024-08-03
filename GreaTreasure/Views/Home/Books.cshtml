@@ -19,7 +19,7 @@
 </h1>
 
 <p>
-    <a asp-action="CreateBook" asp-route-id="@TempData["shelfID"]">הוסף ספר</a>
+    <a asp-action="CreateBook" asp-route-id="@TempData["shelfID"]" class="btn btn-primary">הוסף ספר</a>
     <a asp-action="CreateBookSet" asp-route-id="@TempData["shelfID"]" class="btn btn-primary">הוסף סט ספרים</a>
 </p>
 @if (isSpaceError)
