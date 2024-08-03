@@ -1,0 +1,14 @@
+﻿@{
+    ViewData["Title"] = "Create Book Set";
+}
+
+<h1>Create Book Set</h1>
+
+<form asp-action="CreateBookSet" method="post">
+    <div class="form-group">
+        <label for="NumberOfBooks">Number of Books in Set</label>
+        <input type="number" class="form-control" id="NumberOfBooks" name="numberOfBooks" min="2" max="6" required />
+    </div>
+    <input type="hidden" name="shelfID" value="@ViewBag.shelfID" />
+    <button type="submit" class="btn btn-primary">Next</button>
+</form>

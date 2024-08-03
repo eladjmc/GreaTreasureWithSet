@@ -1,0 +1,34 @@
+﻿@{
+    ViewData["Title"] = "Add Book Set";
+    int numberOfBooks = ViewBag.NumberOfBooks;
+    int shelfID = ViewBag.ShelfID;
+}
+
+<h1>Add Book Set</h1>
+
+<form asp-action="AddBookSetPost" method="post">
+    <input type="hidden" name="shelfID" value="@shelfID" />
+    <input type="hidden" name="numberOfBooks" value="@numberOfBooks" />
+
+    @for (int i = 0; i < numberOfBooks; i++)
+    {
+        <div class="form-group">
+            <label for="BookTitles">Book Title @(i + 1)</label>
+            <input type="text" class="form-control" name="bookTitles" required />
+        </div>
+        <div class="form-group">
+            <label for="Descriptions">Description @(i + 1)</label>
+            <input type="text" class="form-control" name="descriptions" required />
+        </div>
+        <div class="form-group">
+            <label for="Heights">Height @(i + 1)</label>
+            <input type="number" class="form-control" name="heights" required />
+        </div>
+        <div class="form-group">
+            <label for="Widths">Width @(i + 1)</label>
+            <input type="number" class="form-control" name="widths" required />
+        </div>
+    }
+
+    <button type="submit" class="btn btn-primary">Add Set</button>
+</form>
