@@ -155,7 +155,6 @@ namespace GreaTreasure.Controllers
             return RedirectToAction("AddBookSet");
         }
 
-        [HttpGet]
         public IActionResult AddBookSet()
         {
             int numberOfBooks = (int)TempData["NumberOfBooks"];
